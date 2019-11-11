@@ -3,14 +3,17 @@
 @import "vars";
 
 html {
-    font-size: 15px;
+	font-size: 15px;
 }
 
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: @black;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	color:@black;	
+	&.no-scroll {
+		overflow: hidden;
+	}
 }
 
 h1,
@@ -19,15 +22,14 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+	margin: 0;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-
 
 @import "section/container";
 @import "section/header";
@@ -40,3 +42,11 @@ h6 {
 @import "section/portfolio";
 @import "section/work";
 @import "section/about";
+@import "section/reviews";
+@import "section/new";
+@import "section/articles";
+@import "section/footer";
+@import "section/modal";
+@import "section/modal-work";
+@import "section/timeline";
+@import "section/progress-bar";

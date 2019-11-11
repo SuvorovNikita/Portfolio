@@ -17,7 +17,7 @@
 	padding: 15px 27px;
 	min-width: 170px;
 	text-align: center;
-	transition: background-color .2s linear, color .2s linear, box-shadow .2s linear;
+	transition: background-color .2s linear, color .2s linear, box-shadow .2s linear, border-color .2s linear;
 
 	&:focus {
 		outline: none;
@@ -27,9 +27,10 @@
 		background-color: @black;
 		color: @white;
 		box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.25);
+		border-color: @black;
 	}
 
-	+ .btn {
+	+.btn {
 		margin-left: 15px;
 	}
 
@@ -40,5 +41,10 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		border-width: 2px;
+	}
+
+	&-thin {
+		min-width: 145px;
+		font-size: 12px;
 	}
 }

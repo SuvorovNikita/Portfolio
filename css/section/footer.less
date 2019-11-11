@@ -1,0 +1,59 @@
+// main: ../style.less
+
+.footer {
+	background-color: @black;
+	padding: 20px 0;
+}
+.footer-inner {
+	display: flex;
+	justify-content: space-between;
+}
+.footer-copyringht {
+	margin-right: 16px;
+	padding-right: 16px;
+	border-right: 1px solid fade(@gray, 35%);
+	color: #8d8d8e;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 400;
+}
+.footer-nav-link {
+	margin-right: 16px;
+	text-decoration: none;
+	color: #8d8d8e;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 15px;
+	&:hover {
+		text-decoration: underline;
+	}
+	&-btn {
+		padding: .5rem 1.4rem;
+		border-radius: 16px;
+        border: 1px solid #8d8d8e;
+        text-transform: uppercase;
+		&:hover {
+			text-decoration: none;
+            background-color: #8d8d8e;
+            color: @black;
+            border-color: #8d8d8e;
+		}
+	}
+}
+.footer-nav {
+	display: flex;
+	align-items: center;
+}
+.footer-crtdits {
+	display: flex;
+	align-items: center;
+}
+.footer-social {
+	display: flex;
+	align-items: center;
+	a {
+		margin-right: 16px;
+		text-decoration: none;
+	}
+}
