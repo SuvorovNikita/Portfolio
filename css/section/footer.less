@@ -7,6 +7,11 @@
 .footer-inner {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+
+	@media @tablet {
+		text-align: center;
+	}
 }
 .footer-copyringht {
 	margin-right: 16px;
@@ -16,6 +21,10 @@
 	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 400;
+	@media @mobile-sm {
+		margin-bottom: 1rem;
+		border: none;
+	}
 }
 .footer-nav-link {
 	margin-right: 16px;
@@ -31,23 +40,41 @@
 	&-btn {
 		padding: .5rem 1.4rem;
 		border-radius: 16px;
-        border: 1px solid #8d8d8e;
-        text-transform: uppercase;
+		border: 1px solid #8d8d8e;
+		text-transform: uppercase;
 		&:hover {
 			text-decoration: none;
-            background-color: #8d8d8e;
-            color: @black;
-            border-color: #8d8d8e;
+			background-color: #8d8d8e;
+			color: @black;
+			border-color: #8d8d8e;
 		}
+	}
+	@media @tablet {
+		margin: 0 .5rem .5rem;
 	}
 }
 .footer-nav {
 	display: flex;
 	align-items: center;
+	@media @tablet {
+		width: 100%;
+		justify-content: center;
+	}
+	@media @mobile-sm {
+		flex-wrap: wrap;
+	}
 }
 .footer-crtdits {
 	display: flex;
 	align-items: center;
+	@media @tablet {
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 1rem;
+	}
+	@media @mobile-sm {
+		flex-direction: column;
+	}
 }
 .footer-social {
 	display: flex;
@@ -55,5 +82,8 @@
 	a {
 		margin-right: 16px;
 		text-decoration: none;
+	}
+	@media @tablet {
+		margin: 0 .5rem .5rem;
 	}
 }

@@ -7,12 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
     <title>Portfolio</title>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
-<body class="no-scroll">
+<body>
 
     <header class="header">
         <div class="container">
@@ -27,13 +26,16 @@
                         <div class="user-prof">UI & UX Designer</div>
                     </div>
                 </div>
-                <nav class="nav">
+                <nav class="nav" id="nav">
                     <a class="nav-link" href="">WORK</a>
                     <a class="nav-link" href="">ABOUT ME</a>
                     <a class="nav-link" href="">BLOG</a>
                     <a class="nav-link" href="">CONTACT</a>
                     <a class="nav-link nav-link-btn" href="">HIRE ME</a>
                 </nav>
+                <button class="burger" type="button" id="navToggle">
+                    <img class="burger-icon" src="img/burger.svg" alt="">
+                </button>
             </div>
         </div>
     </header>
@@ -68,8 +70,8 @@
                         </a>
                     </div>
 
-                    <a class="btn" href="#">HIRE ME</a>
-                    <button class="btn" type="button">SEE MY RESUME </button>
+                    <a class="btn" href="#" data-modal="#modal-hire">HIRE ME</a>
+                    <button class="btn" type="button" data-modal="#modal-resume">SEE MY RESUME</button>
 
                 </div>
 
@@ -82,13 +84,13 @@
     <div class="works">
         <div class="container">
             <div class="works-nav">
-                <a class="works-nav-link" href="#">All</a>
-                <a class="works-nav-link" href="#">App</a>
-                <a class="works-nav-link" href="#">Website</a>
-                <a class="works-nav-link" href="#">Interaction</a>
+                <a class="works-nav-link" href="#" data-filter="All">All</a>
+                <a class="works-nav-link" href="#" data-filter="App">App</a>
+                <a class="works-nav-link" href="#" data-filter="Website">Website</a>
+                <a class="works-nav-link" href="#" data-filter="Interaction">Interaction</a>
             </div>
             <div class="portfolio">
-                <div class="portfolio-col">
+                <div class="portfolio-col" data-cat="app">
                     <div class="work">
                         <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
                         <div class="work-content">
@@ -99,7 +101,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-col">
+                <div class="portfolio-col" data-cat="website">
+                    <div class="work">
+                        <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
+                        <div class="work-content">
+                            <div class="work-cat">CATEGORY app</div>
+                            <div class="work-title">PROJECT TITLE
+                                <time class="work-date" datetime="2019-11-06">2019</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-col" data-cat="interaction">
+                    <div class="work">
+                        <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
+                        <div class="work-content">
+                            <div class="work-cat">CATEGORY interaction</div>
+                            <div class="work-title">PROJECT TITLE
+                                <time class="work-date" datetime="2019-11-06">2019</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-col" data-cat="website">
                     <div class="work">
                         <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
                         <div class="work-content">
@@ -110,78 +134,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-col">
+                <div class="portfolio-col" data-cat="interaction">
                     <div class="work">
                         <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
                         <div class="work-content">
-                            <div class="work-cat">CATEGORY</div>
+                            <div class="work-cat">CATEGORY website</div>
                             <div class="work-title">PROJECT TITLE
                                 <time class="work-date" datetime="2019-11-06">2019</time>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-col">
+                <div class="portfolio-col" data-cat="app">
                     <div class="work">
                         <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
                         <div class="work-content">
-                            <div class="work-cat">CATEGORY</div>
-                            <div class="work-title">PROJECT TITLE
-                                <time class="work-date" datetime="2019-11-06">2019</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-col">
-                    <div class="work">
-                        <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
-                        <div class="work-content">
-                            <div class="work-cat">CATEGORY</div>
-                            <div class="work-title">PROJECT TITLE
-                                <time class="work-date" datetime="2019-11-06">2019</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-col">
-                    <div class="work">
-                        <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
-                        <div class="work-content">
-                            <div class="work-cat">CATEGORY</div>
-                            <div class="work-title">PROJECT TITLE
-                                <time class="work-date" datetime="2019-11-06">2019</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-col">
-                    <div class="work">
-                        <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
-                        <div class="work-content">
-                            <div class="work-cat">CATEGORY</div>
-                            <div class="work-title">PROJECT TITLE
-                                <time class="work-date" datetime="2019-11-06">2019</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-col">
-                    <div class="work">
-                        <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
-                        <div class="work-content">
-                            <div class="work-cat">CATEGORY</div>
-                            <div class="work-title">PROJECT TITLE
-                                <time class="work-date" datetime="2019-11-06">2019</time>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-col">
-                    <div class="work">
-                        <img class="work-img" src="https://via.placeholder.com/370x300" alt="">
-                        <div class="work-content">
-                            <div class="work-cat">CATEGORY</div>
+                            <div class="work-cat">CATEGORY app</div>
                             <div class="work-title">PROJECT TITLE
                                 <time class="work-date" datetime="2019-11-06">2019</time>
                             </div>
@@ -208,18 +176,10 @@
                     <h2 class="about-bigtitle">WHO AM I</h2>
 
                     <div class="about-text">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget
-                            luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis
-                            eros sem, elementum consequat est consequat eu.
-                            Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien,
-                            bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci
-                            luctus et ultrices posuere cubilia Curae; Donec
-                            at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius
-                            est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit
-                            at, imperdiet eros. Integer tristique posuere
-                            purus. Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa,
-                            sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa
-                            mattis quis. Nunc ultrices urna eu nunc lobortis</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu.
+                            Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
+                            at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere
+                            purus. Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis</p>
                     </div>
                     <a class="btn" href="#">HIRE ME</a>
                     <button class="btn" type="button">SEE MY RESUME </button>
@@ -233,11 +193,8 @@
     <div class="reviews">
         <div class="container">
             <div class="reviews-item">
-                <div class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque
-                    eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
-                    iaculis eros sem, elementum consequat est consequat eu. Quisque
-                    aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus
-                    dictum.
+                <div class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque
+                    aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum.
                 </div>
                 <div class="reviews-author">
                     <img class="reviews-photo" src="https://via.placeholder.com/103/333" alt="">
@@ -248,8 +205,7 @@
                         <img class="reviews-star" src="img/star.svg" width="14px" height="14px" alt="">
                         <img class="reviews-star" src="img/star.svg" width="14px" height="14px" alt="">
                         <img class="reviews-star" src="img/star.svg" width="14px" height="14px" alt="">
-                        <img class="reviews-star reviews-star-unactive" src="img/star.svg" width="14px" height="14px"
-                            alt="">
+                        <img class="reviews-star reviews-star-unactive" src="img/star.svg" width="14px" height="14px" alt="">
                     </div>
                 </div>
             </div>
@@ -262,7 +218,6 @@
                 <div class="new-title">READ ME</div>
                 <div class="new-text">Sometimes i write something smart</div>
             </div>
-
             <div class="articles">
                 <div class="articles-col">
                     <div class="article-item">
@@ -277,9 +232,7 @@
                             <h4 class="articalse-title">TEN THE BEST APP IN 2017</h4>
                             <div class="articalse-cat">CATEGORY</div>
                             <div class="articalse-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
-                                    enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
-                                    ante. Sed iaculis eros sem, elementum consequat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.</p>
                             </div>
                         </div>
                         <a class="btn btn-sm" href="#">READ MORE</a>
@@ -298,9 +251,7 @@
                             <h4 class="articalse-title">TEN THE BEST APP IN 2017</h4>
                             <div class="articalse-cat">CATEGORY</div>
                             <div class="articalse-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
-                                    enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
-                                    ante. Sed iaculis eros sem, elementum consequat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.</p>
                             </div>
                         </div>
                         <a class="btn btn-sm" href="#">READ MORE</a>
@@ -319,9 +270,7 @@
                             <h4 class="articalse-title">TEN THE BEST APP IN 2017</h4>
                             <div class="articalse-cat">CATEGORY</div>
                             <div class="articalse-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
-                                    enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
-                                    ante. Sed iaculis eros sem, elementum consequat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.</p>
                             </div>
                         </div>
                         <a class="btn btn-sm" href="#">READ MORE</a>
@@ -361,9 +310,9 @@
         </div>
     </footer>
 
-    <div class="modal" style="display: none;">
+    <div class="modal" id="project-1">
         <div class="modal-dialog">
-            <button class="modal-close" type="button"></button>
+            <button class="modal-close" type="button" data-close=""></button>
             <div class="modal-work">
                 <div class="modal-work-preview">
                     <img class="modal-work-photo" src="https://via.placeholder.com/790x780" alt="">
@@ -381,18 +330,10 @@
                     </div>
 
                     <div class="modal-work-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget
-                        luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros
-                        sem, elementum consequat est consequat eu. Quisque aliquet a ipsum
-                        nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor
-                        ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                        Donec at mauris porta, ullamcorper
-                        sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus
-                        neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique
-                        posuere purus. Suspendisse placerat,
-                        quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae
-                        dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu
-                        nunc lobortis
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum
+                        nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper
+                        sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus. Suspendisse placerat,
+                        quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis
                     </div>
                     <div class="modal-work-footer">
                         <button class="modal-work-btn modal-work-btn-prev" type="button">Previous</button>
@@ -402,13 +343,12 @@
             </div>
         </div>
     </div>
-    <div class="modal">
+
+    <div class="modal" id="modal-resume">
         <div class="modal-dialog">
-            <button class="modal-close" type="button"></button>
-            <div class="modal-content">
+            <button class="modal-close" type="button" data-close=""></button>
+            <div class="modal-content text-center">
                 <h3 class="modal-title">RESUME</h3>
-                <a class="btn btn-thin" href="#.">DOWLOAD PDF</a>
-                <a class="btn btn-thin" href="#.">PRINT</a>
             </div>
             <div class="timeline">
 
@@ -419,9 +359,7 @@
                         <h5 class="timeline-subtitle">Freelancer</h5>
                         <div class="timeline-position">Art Director</div>
                         <div class="timeline-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi!
-                                Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero
-                                perspiciatis velit?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi! Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero perspiciatis velit?</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -429,9 +367,7 @@
                         <h5 class="timeline-subtitle">Freelancer</h5>
                         <div class="timeline-position">Art Director</div>
                         <div class="timeline-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi!
-                                Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero
-                                perspiciatis velit?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi! Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero perspiciatis velit?</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -439,9 +375,7 @@
                         <h5 class="timeline-subtitle">Freelancer</h5>
                         <div class="timeline-position">Art Director</div>
                         <div class="timeline-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi!
-                                Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero
-                                perspiciatis velit?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi! Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero perspiciatis velit?</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -449,9 +383,7 @@
                         <h5 class="timeline-subtitle">Freelancer</h5>
                         <div class="timeline-position">Art Director</div>
                         <div class="timeline-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi!
-                                Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero
-                                perspiciatis velit?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi! Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero perspiciatis velit?</p>
                         </div>
                     </div>
                 </div>
@@ -520,22 +452,49 @@
                         <h5 class="timeline-subtitle">UI/UX Desing</h5>
                         <div class="timeline-position">Art Director</div>
                         <div class="timeline-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi!
-                                Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero
-                                perspiciatis velit?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi quaerat cumque commodi! Saepe, facere numquam ipsam ea dolores porro alias amet qui veritatis et a quidem libero perspiciatis velit?</p>
                         </div>
                     </div>
                 </div>
-               
+
             </div>
             <div class="text-centr">
-                    <a class="btn" href="#.">HIRE ME</a>
-                </div>
-
+                <a class="btn" href="#.">HIRE ME</a>
+            </div>
         </div>
     </div>
 
+    <div class="modal" id="modal-hire">
+        <div class="modal-dialog modal-dialog-sm">
+            <button class="modal-close" type="button" data-close=""></button>
+            <div class="contact">
+                <div class="contact-left">
+                    <h3 class="modal-title mb-0">Let's talk!</h3>
+                    <div class="modal-subtitle">Call me or send me a request</div>
+                    <ul class="contact-info">
+                        <li class="contact-info-item">(200) 100 3000</li>
+                        <li class="contact-info-item">dsfsdf@mail.ru</li>
+                    </ul>
 
+                    <form class="form" action="/" method="POST">
+                        <div class="form-group">
+                            <label class="label" for="input-email">Adress e-mail</label>
+                            <input class="input" type="text" id="input-email" placeholder="Adress e-mail">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="input-email">Reqwest</label>
+                            <textarea class="textarea" name="input-text" id="input-text" placeholder="lalallala"></textarea>
+                        </div>
+                        <button class="btn" type="submit">SEND</button>
+
+                    </form>
+                </div>
+                <div class="contact-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 
 </body>
 

@@ -1,55 +1,75 @@
-// main: ../style.less 
+// main: ../style.less
 
 .nav {
-    display: flex;
-    height: 100%;
-    align-items: center;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+
+	@media @mobile {
+		text-align: center;
+		height: auto;
+		padding: 1rem 1rem;
+		width: 100%;
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background-color: #fff;
+		z-index: 1000;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+		.show {
+			display: flex;
+		}
+	}
 }
 
 .nav-link {
-    position: relative;
-    margin-left: 30px;
-    color: @black;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
+	position: relative;
+	margin-left: 30px;
+	color: @black;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
 
-    &:after {
-        display: block;
-        content: "";
-        width: 0;
-        height: 2px;
-        background-color: @black;
-        position: absolute;
-        bottom: -5;
-        left: 0;
-        z-index: 1;
-        transition: width .2s linear;
-    }
+	&:after {
+		display: block;
+		content: "";
+		width: 0;
+		height: 2px;
+		background-color: @black;
+		position: absolute;
+		bottom: -5;
+		left: 0;
+		z-index: 1;
+		transition: width .2s linear;
+	}
 
-    &:hover:not(.nav-link-btn),
-    &.active {
-        &:after {
-            width: 100%;
-        }
-    }
+	&:hover:not(.nav-link-btn),
+	&.active {
+		&:after {
+			width: 100%;
+		}
+	}
 
-    &-btn {
-        padding: .66rem 2rem;
-        border: 2px solid @black;
-        border-radius: 20px;
-        transition: background-color .2s linear;
-        transition: color .2s linear;
+	&-btn {
+		padding: .66rem 2rem;
+		border: 2px solid @black;
+		border-radius: 20px;
+		transition: background-color .2s linear;
+		transition: color .2s linear;
 
-        &:hover {
-            background-color: @black;
-            color: @white;
-        }
-    }
+		&:hover {
+			background-color: @black;
+			color: @white;
+		}
+	}
 
-
-
-
+	@media @mobile {
+		width: 100%;
+		margin-left: 0;
+		padding: .5rem 1rem;
+	}
 }
